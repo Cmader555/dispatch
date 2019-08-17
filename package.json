@@ -38,5 +38,6 @@
     "passport-local": "^1.0.0",
     "validation": "0.0.1",
     "validator": "^11.1.0"
-  }
+  },
+  "devDependencies": {}
 }
