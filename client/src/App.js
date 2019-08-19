@@ -1,12 +1,18 @@
-import React from 'react';
+import React from "react";
+import { createBrowserHistory } from "history";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import LandingPage from "./views/components/LandingPage/Components.jsx";
 
 
+var hist = createBrowserHistory();
 
 function App() {
   return (
-    <div >
-      <h1>Hello World!</h1>
-    </div>
+    <Router history={hist}>
+      <Switch>
+        <Route path="/" component={LandingPage} />
+      </Switch>
+    </Router>
   );
 }
 
