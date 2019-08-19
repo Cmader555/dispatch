@@ -11,13 +11,21 @@ class LandingPage extends React.Component {
         username: "",
         password: ""
     }
+    
 
     render() {
+        const logIn = {
+           display: "block"
+          };
         return (
             <div>
-                <div className="logIn">
-                    <FormControl>
+                <div>
+                    <FormControl style={logIn}>
                         <InputLabel htmlFor="my-input">Username</InputLabel>
+                        <Input id="my-input" aria-describedby="my-helper-text" />
+                    </FormControl>
+                    <FormControl style={logIn}>
+                        <InputLabel htmlFor="my-input">Password</InputLabel>
                         <Input id="my-input" aria-describedby="my-helper-text" />
                     </FormControl>
                 </div>
