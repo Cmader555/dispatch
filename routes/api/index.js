@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const jwtStrategy = require("passport").authenticate("jwt", { session: false });
 
-// Book routes
+// user routes
 router.use("/user", require("./user"));
 
 
