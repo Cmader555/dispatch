@@ -7,19 +7,20 @@ module.exports = function validateRegisterInput(data) {
 
 // Convert empty fields to an empty string so we can use validator functions
   // data.name = !isEmpty(data.name) ? data.name : "";
-  data.username = !isEmpty(data.username) ? data.username : "";
+  data.userID = !isEmpty(data.userID) ? data.userID : "";
   data.password = !isEmpty(data.password) ? data.password : "";
   data.password2 = !isEmpty(data.password2) ? data.password2 : "";
 
 
 // Username checks
-  if (Validator.isEmpty(data.username)) {
-    errors.username = "username field is required";
-  } else if (!Validator.isEmail(data.email)) {
-    errors.username = "username is invalid";
+  if (Validator.isEmpty(data.userID)) {
+    errors.userID = "userID field is required";
+  } 
+  // else if (!Validator.isEmail(data.username)) {
+  //   errors.username = "username is invalid";
     
-  }
-
+  // }
+    
 // Password checks
   if (Validator.isEmpty(data.password)) {
     errors.password = "Password field is required";

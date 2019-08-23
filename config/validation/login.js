@@ -5,14 +5,14 @@ module.exports = function validateLoginInput(data) {
   let errors = {};
   
 // Convert empty fields to an empty string so we can use validator functions
-  data.username = !isEmpty(data.username) ? data.username : "";
+  data.userID= !isEmpty(data.userID) ? data.userID : "";
   data.password = !isEmpty(data.password) ? data.password : "";
 
 // Email checks
-  if (Validator.isEmpty(data.username)) {
-    errors.username = "Username field is required";
-  } else if (!Validator.isEmail(data.username)) {
-    errors.username = "Username is invalid";
+  if (Validator.isEmpty(data.userID)) {
+    errors.userID = "UserID field is required";
+  } else if (!Validator.isEmail(data.userID)) {
+    errors.userID = "UserID is invalid";
   }
 
 // Password checks

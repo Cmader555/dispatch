@@ -32,12 +32,12 @@ router.post("/register", (req, res) => {
     if (!isValid) {
         return res.status(400).json(errors);
     }
-    User.findOne({ username: req.body.username }).then(user => {
+    User.findOne({ userID: req.body.userID }).then(user => {
         if (user) {
-            return res.status(400).json({ message: "Username already exists" });
+            return res.status(400).json({ message: "UserID already exists" });
         } else {
             const newUser = new User({
-                username: req.body.username,
+                userID: req.body.userID,
                 password: req.body.password,
                 phone: req.body.phone
             });
@@ -59,9 +59,9 @@ router.post("/register", (req, res) => {
 
 router.post("/login", localStrategy, function (req, res) {
     //res.json({ token: tokenizer(req.user) });
-    const username = req.body.username;
+    const userID = req.body.userID;
 
-    User.findOne({username}, "username").then( user => {
+    User.findOne({userID}, "userID").then( user => {
 
             res.json({
                 user,
