@@ -38,6 +38,7 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
+    "sweetalert": "^2.1.2",
     "validation": "0.0.1",
     "validator": "^11.1.0"
   },
